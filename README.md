@@ -13,6 +13,8 @@ Configured an active File Integrity Monitoring (FIM) telemetry pipeline using Wa
 
 ## 3. Engineering Implementation
 
+
+
 ### A. FIM Rule Deployment (`ossec.conf`)
 Configured granular directory monitoring on public and high-risk paths with real-time tracking enabled:
 ```xml
@@ -25,6 +27,11 @@ Configured granular directory monitoring on public and high-risk paths with real
 (Monitored system binaries including regedit.exe, powershell.exe, and public user directories).
 
 ```xml
+
+
+![FIM Configuration](OSSEC.PNG)
+
+
 
 ## 4. Threat Simulation & Forensic Triage
 
@@ -41,8 +48,9 @@ The Wazuh FIM engine captured the event and triggered a Level 5 alert:
 
 ```
 
-![Wazuh Alert Triage](malware_evil.png)
-![FIM Inventory Record](file%20integrity.png)
+![Wazuh Alert Triage](malware_evil.PNG)
+
+![FIM Inventory Record](file%20integrity.PNG)
 
 ---
 
