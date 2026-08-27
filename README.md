@@ -11,8 +11,13 @@ Configured an active File Integrity Monitoring (FIM) telemetry pipeline using Wa
   * Tactic: Persistence (TA0003) / Defense Evasion (TA0005)
   * Technique: Ingress Tool Transfer (T1105)
 
+
+
+
 ## 3. Engineering Implementation
 
+
+![FIM Configuration](OSSEC.PNG)
 
 
 ### A. FIM Rule Deployment (`ossec.conf`)
@@ -27,10 +32,6 @@ Configured granular directory monitoring on public and high-risk paths with real
 (Monitored system binaries including regedit.exe, powershell.exe, and public user directories).
 
 ```xml
-
-
-![FIM Configuration](OSSEC.PNG)
-
 
 
 ## 4. Threat Simulation & Forensic Triage
