@@ -24,6 +24,8 @@ Configured granular directory monitoring on public and high-risk paths with real
 </syscheck>
 (Monitored system binaries including regedit.exe, powershell.exe, and public user directories).
 
+```xml
+
 ## 4. Threat Simulation & Forensic Triage
 
 ### A. Ingress Simulation
@@ -36,6 +38,8 @@ The Wazuh FIM engine captured the event and triggered a Level 5 alert:
 * **Decoder:** syscheck_new_entry
 * **Target Node:** windows10 (10.17.117.16)
 * **User SID / Actor:** techm (S-1-5-21-347...)
+
+```
 
 ![Wazuh Alert Triage](screenshots/malware_evil.png)
 ![FIM Inventory Record](screenshots/file integrity.png)
