@@ -24,8 +24,7 @@ Configured granular directory monitoring on public and high-risk paths with real
 </syscheck>
 (Monitored system binaries including regedit.exe, powershell.exe, and public user directories).
 
-
-**## 4. Threat Simulation & Forensic Triage ** 
+## 4. ** Threat Simulation & Forensic Triage ** 
 A. Ingress Simulation
 Simulated an unauthorized payload drop by placing an unverified artifact into the monitored path:
 
