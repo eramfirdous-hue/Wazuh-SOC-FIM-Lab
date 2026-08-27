@@ -69,9 +69,6 @@ The Wazuh FIM engine captured the event and triggered a Level 5 alert:
 * Identity & User SID Correlation (`techm`)
 * Incident Response Documentation & Playbook Execution
 
-Rule ID: 554 (File added to the system)
-
-Decoder: syscheck_new_entry
 
 Target Node: windows10 (10.17.117.16)
 
