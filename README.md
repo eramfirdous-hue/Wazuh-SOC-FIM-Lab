@@ -47,13 +47,11 @@ The Wazuh FIM engine captured the event and triggered a Level 5 alert:
 * **Target Node:** windows10 (10.17.117.16)
 * **User SID / Actor:** techm (S-1-5-21-347...)
 
-```
 
 ![Wazuh Alert Triage](malware_evil.PNG)
 
 ![FIM Inventory Record](file%20integrity.PNG)
 
----
 
 ## 5. Incident Response Playbook (SOC Tier-1 Triage)
 
