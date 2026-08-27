@@ -41,8 +41,8 @@ The Wazuh FIM engine captured the event and triggered a Level 5 alert:
 
 ```
 
-![Wazuh Alert Triage](screenshots/malware_evil.png)
-![FIM Inventory Record](screenshots/file integrity.png)
+![Wazuh Alert Triage](malware_evil.png)
+![FIM Inventory Record](file%20integrity.png)
 
 ---
 
