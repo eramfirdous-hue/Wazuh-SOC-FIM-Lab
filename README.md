@@ -24,14 +24,39 @@ Configured granular directory monitoring on public and high-risk paths with real
 </syscheck>
 (Monitored system binaries including regedit.exe, powershell.exe, and public user directories).
 
-## 4. ** Threat Simulation & Forensic Triage ** 
-A. Ingress Simulation
-Simulated an unauthorized payload drop by placing an unverified artifact into the monitored path:
+## 4. Threat Simulation & Forensic Triage
 
-c:\users\public\pictures\malware_evil.txt
+### A. Ingress Simulation
+Simulated an unauthorized payload drop by placing an unverified artifact into the monitored path:  
+`c:\users\public\pictures\malware_evil.txt`
 
-B. Telemetry & Alert Analysis
+### B. Telemetry & Alert Analysis
 The Wazuh FIM engine captured the event and triggered a Level 5 alert:
+* **Rule ID:** 554 (File added to the system)
+* **Decoder:** syscheck_new_entry
+* **Target Node:** windows10 (10.17.117.16)
+* **User SID / Actor:** techm (S-1-5-21-347...)
+
+![Wazuh Alert Triage](screenshots/02_wazuh_alert.png)
+![FIM Inventory Record](screenshots/03_fim_inventory.png)
+
+---
+
+## 5. Incident Response Playbook (SOC Tier-1 Triage)
+
+* **Incident ID:** INC-2026-FIM-554
+* **Alert Description:** Rule 554 - File added to monitored public directory
+* **Affected Asset:** windows10 (Agent 001 / 10.17.117.16)
+* **Investigative Findings:** File `malware_evil.txt` dropped in public pictures directory by user `techm`. SHA256 baseline created in FIM inventory.
+* **Remediation Action:** Artifact contained for sandbox hash analysis; user activity audited for lateral movement.
+
+---
+
+## 6. Key Competencies Validated
+* SIEM Architecture & Granular Configuration (Wazuh `ossec.conf`)
+* Real-time Endpoint Telemetry & FIM Triage
+* Identity & User SID Correlation (`techm`)
+* Incident Response Documentation & Playbook Execution
 
 Rule ID: 554 (File added to the system)
 
